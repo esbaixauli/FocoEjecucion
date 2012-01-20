@@ -1,0 +1,46 @@
+<project name="FocoEjecucion" default="jar" basedir="..">
+    <description>
+        build system for FocoEjecucion
+    </description>
+
+  <property name="src" location="CapturaEjemplo/src"/>
+  <property name="build" location="CapturaEjemplo/build"/>
+  <property name="dist"  location="CapturaEjemplo/bin"/>
+  <property name="lib" location="CapturaEjemplo/lib"/>
+  <property name="res" location="CapturaEjemplo/res"/>
+
+  <target name="init">
+    <tstamp/>
+    <mkdir dir="${build}"/>
+  </target>
+
+  <target name="compile" depends="init"
+				description="compile the source " >
+    <javac srcdir="${src}" destdir="${build}" encoding="utf-8"
+            includeantruntime="false" >
+        <classpath>
+            <pathelement path="${classpath}"/>
+            <pathelement location="${lib}/jna.jar"/>
+            <pathelement location="${lib}/jmf.jar"/>
+            <pathelement location="${lib}/platform.jar"/>
+        </classpath>
+    </javac>
+  </target>
+
+  <target name="clean" description="clean up" >
+    <delete dir="${build}"/>
+  </target>
+
+  <target name="jar" description="jars it up" depends="compile" >
+    <jar destfile="${dist}/FocoEjecucion.jar" >
+        <fileset dir="${build}"/>
+        <fileset dir="${res}"/>
+        <zipfileset includes="**/*.class" src="${lib}/jmf.jar"/>
+        <zipfileset includes="**/*.class" src="${lib}/jna.jar"/>
+        <zipfileset includes="**/*.class" src="${lib}/platform.jar"/>
+        <manifest>
+            <attribute name="Main-Class" value="ubu.view.CaptureMainFrame"/>
+        </manifest>
+    </jar>
+  </target>
+</project>
