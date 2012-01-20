@@ -29,7 +29,7 @@ public class Mediator {
 
     }
 
-    // Start image capture
+    // Start image window capture
     public void start(final int frameRate, final String rec,
             int checkRate, final String path, final String format) {
         System.out.println("Recording at Framerate: "+ frameRate);
