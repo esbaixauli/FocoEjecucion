@@ -1,6 +1,6 @@
 <project name="FocoEjecucion" default="jar" basedir="..">
     <description>
-        build system for FocoEjecucion oooooooooooooooo
+        build system for FocoEjecucion modificado para git
     </description>
 
   <property name="src" location="CapturaEjemplo/src"/>
