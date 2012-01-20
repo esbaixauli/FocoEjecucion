@@ -1,5 +1,6 @@
 package ubu.logic;
 
+/* Modificacion rama prenedo */
 /*JNA is an open library available at Sun's website.
 Both the jna.jar and the platform.jar must be present*/
 import com.sun.jna.*;
