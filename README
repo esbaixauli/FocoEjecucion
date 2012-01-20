@@ -1,1 +1,15 @@
-test branch
+El-Cid-Capturador is a shadow testing application which may be useful for GUI application developers. It lets you test how a real user deals with your app by recording a screenshot video of just the screen area that your app uses when your app is in front. This will let you see exactly how your app is used and therefore lead you in the right way towards building a successful application.
+
+Authors:
+- Rubén Antón García
+- Adrián Díez Castaño
+- Pedro Renedo Fernández
+- Enrique Sainz Baixauli
+
+Requirements:
+- Windows XP, Vista or 7, 32 or 64 bits
+- Mac OSX Lion or higher
+- Linux with a wmctrl compatible window manager (that is, almost every window manager out there)
+- Java Runtime Environment 6+
+
+Check for updates at: http://elcidcapturador.blogspot.com/
